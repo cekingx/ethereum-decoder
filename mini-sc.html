@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, user-scalable=yes">
+  <title>Ethereum Input Data Decoder</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Ethereum Input Data Decoder - Mini SC</h1>
+
+  <div class="container">
+    <div class="column">
+      <div class="actions"></div>
+      <label>ABI</label>
+      <textarea id="abiInput" cols="70" rows="35">
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "getPerson",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_person",
+        "type": "string"
+      }
+    ],
+    "name": "setPerson",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
+      </textarea>
+    </div>
+    <div class="column">
+      <div class="actions"></div>
+      <label>Input Data</label>
+      <textarea id="dataInput" cols="70" rows="35">
+      </textarea>
+    </div>
+    <div class="column">
+      <div class="actions">
+        <button id="decode">Decode</button>
+      </div>
+      <div>
+        <label>Output</label>
+        <textarea id="output" cols="70" rows="35"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <script src="/bundle.js"></script>
+
+</body>
+</html>
